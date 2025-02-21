@@ -1,0 +1,9 @@
+<app-header/>
+<app-calculate-investment (calculate)="showCalculateResults($event)" />
+
+@if (!investmentsData()) {
+    <p class="center">Please enter some values and press "Calculate" </p>
+}
+@else {
+    <app-investments [investments]="investmentsData()"></app-investments>
+}
